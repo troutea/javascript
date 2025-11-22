@@ -43,11 +43,25 @@ console.log(name)
 
 
   // 5. Given an array numbers, write a while loop that continues to sum the numbers until the sum is greater than 100, then exits the loop.
-   let array_of_numbers = [20,4,5,8,13,25,442,56,39,12]
+   // let array_of_numbers = [20,4,5,8,13,25,442,56,39,12]
 
-   let sum = 0;
-   let i = 0;
+   // let sum = 0;
+   // let i = 0;
 
-   for (let i = 0; i < array_of_numbers.length; i++) {
-      console.log(i)
+   // for (let i = 0; i < array_of_numbers.length; i++) {
+   //    console.log(i)
+   // }
+   
+
+
+   // 6. Define a function named calculateArea that takes two parameters, width and height, and returns the area of a rectangle. // width * height
+
+   function calculateArea( width, height)
+   {
+      area = width * height;
+      return area
    }
+
+   let area_one = calculateArea(5,6)
+
+   console.log(area_one)
