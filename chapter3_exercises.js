@@ -18,3 +18,31 @@ let new_array = []
      //new_array.push[i]
     }
 //console.log(new_array[i])
+
+//  2. Object Manipulation: Given an array of objects representing people with names and ages, write a function to find the person with the highest age.
+
+const names_and_ages = [
+    {name: "james", age: 27 },
+    {name: "lucy", age: 31 },
+    {name: "juan", age: 102}
+]
+
+function findTheOldestPerson(arr) {
+  console.log("calling the oldest person");
+  let oldest_person = arr[0];
+  for(let i = 0; i < names_and_ages.length; i++) {
+    //console.log(arr[i])
+    let new_person = arr[i]
+    if (new_person['age'] > oldest_person.age)
+    {
+        oldest_person = new_person
+    }
+  }
+  return oldest_person
+
+
+}
+
+
+let found_oldest_person = findTheOldestPerson(names_and_ages);
+console.log(found_oldest_person)
