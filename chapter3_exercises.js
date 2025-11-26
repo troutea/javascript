@@ -46,3 +46,41 @@ function findTheOldestPerson(arr) {
 
 let found_oldest_person = findTheOldestPerson(names_and_ages);
 console.log(found_oldest_person)
+
+
+// 3. Data Transformation: Convert an array of strings containing numbers into an array of actual number values.
+//create array with the strings
+//create a new empty array
+//loop through the array
+//pust the converted integers to the new array
+
+let arr_of_strings = ['1', '2', '3', '4', '5', '6']
+let array_of_ints = []
+
+for (let i = 0; i < arr_of_strings.length; i++) 
+{
+  let converted_string_value = parseInt(arr_of_strings[i]);
+  
+  array_of_ints.push(converted_string_value)
+  
+}
+
+console.log(array_of_ints)
+
+
+// 4. Array Sorting: Write a function that sorts an array of objects based on a specific property (e.g., 'price') in ascending order.
+//create the array of objects
+//use the sort function 
+
+let array_of_objects = [
+  {price: 4.2},
+  {price: 8.3},
+  {price: 2.2}
+]
+
+array_of_objects.sort(function(a,b){
+  //console.log(a)
+  return b.price - a.price
+})
+console.log(array_of_objects)
+
