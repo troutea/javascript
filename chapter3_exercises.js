@@ -4,7 +4,7 @@
 //3  filter the even numbers
 //4 create the empty array
 
-
+console.log("running exercise 1")
   let integers = [1,2,3,4,5,6,7,8,9,10]
 let new_array = []
 
@@ -20,7 +20,7 @@ let new_array = []
 //console.log(new_array[i])
 
 //  2. Object Manipulation: Given an array of objects representing people with names and ages, write a function to find the person with the highest age.
-
+console.log("running exercise 2")
 const names_and_ages = [
     {name: "james", age: 27 },
     {name: "lucy", age: 31 },
@@ -47,7 +47,7 @@ function findTheOldestPerson(arr) {
 let found_oldest_person = findTheOldestPerson(names_and_ages);
 console.log(found_oldest_person)
 
-
+console.log("running exercise 3")
 // 3. Data Transformation: Convert an array of strings containing numbers into an array of actual number values.
 //create array with the strings
 //create a new empty array
@@ -71,7 +71,7 @@ console.log(array_of_ints)
 // 4. Array Sorting: Write a function that sorts an array of objects based on a specific property (e.g., 'price') in ascending order.
 //create the array of objects
 //use the sort function 
-
+console.log("running exercise 4")
 let array_of_objects = [
   {price: 4.2},
   {price: 8.3},
@@ -84,3 +84,66 @@ array_of_objects.sort(function(a,b){
 })
 console.log(array_of_objects)
 
+// 5. Array Manipulation: Write a function that removes the first and last elements from an array and returns the modified array.
+//1.Create the array
+//2 Create the functionand pass in the array.
+//4 get the length of the array
+//3 slice the first and last  the first element of the array and the last element.
+
+let demo_array = [1,2,3,4,5,6];
+
+function trimArray(arr) {
+console.log("calling the trim array function")
+let lengthOfArray = arr.length;
+const trimmedArray = arr.slice(1,lengthOfArray - 1)
+
+return trimmedArray
+
+}
+
+console.log("running exercise 5")
+console.log(trimArray(demo_array))
+
+
+
+// 6. Object Iteration: Given an object representing a shopping cart with items and their quantities, write a function that calculates the total cost of the items.
+// - Creat a dict with the key value pairs 
+// - set a sum to zero
+// - loop through the object multiply the quantity by the price  
+
+const shopping_list = {
+  'cheese': {
+    quantity : 4,
+    price :8
+  },
+  'milk': {
+    quantity : 10,
+    price : 2
+  }
+}
+
+function sumProducts(obj) {
+
+  const object_keys = Object.keys(obj);
+  let sum = 0;
+  //console.log(object_keys);
+  for (let i = 0; i < object_keys.length; i++) {
+   // console.log(object_keys[i]);
+    let current_key = object_keys[i];
+    //console.log(current_key);
+    const key_data = shopping_list[current_key];
+    console.log(key_data);
+    let product_total = key_data.price * key_data.quantity;
+
+    sum = sum + product_total;
+
+
+  }
+  return sum
+
+  //console.log("inside the som of the products function")
+  //console.log(obj.cheese.quantity)
+  
+}
+console.log("running exercise 6")
+console.log(sumProducts(shopping_list))
