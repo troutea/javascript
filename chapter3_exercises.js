@@ -147,3 +147,42 @@ function sumProducts(obj) {
 }
 console.log("running exercise 6")
 console.log(sumProducts(shopping_list))
+
+
+//7. // 7. Object Manipulation: Write a function that deep clones an object (i.e., copies all nested objects and arrays) to prevent unintended mutations.
+//Steps 
+//create the object
+// assign a variable to object keys
+//convert it into a list
+
+console.log("running exercise 7")
+
+let friend = {
+  'rupert' : {
+    hobbies: ['gym', 'reading', 'mathematics']
+  }
+}
+
+function Deepclone(obj) {
+
+  let new_object = {}
+
+  let object_keys = Object.keys(obj)
+  console.log(object_keys)
+
+  for (let i =0; i < object_keys.length; i++){
+    let current_key = object_keys[i]
+    new_object[current_key] = obj[current_key]
+  }
+   return new_object
+}
+
+console.log("running example 7")
+let new_friends = Deepclone(friend)
+
+friend.james = {
+  hobbies: ['sleep']
+}
+
+console.log(new_friends)
+console.log(friend)
