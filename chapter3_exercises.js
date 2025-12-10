@@ -186,3 +186,117 @@ friend.james = {
 
 console.log(new_friends)
 console.log(friend)
+
+
+
+ // 8. Object Iteration: Given an object representing a student's grades in various subjects, calculate their average grade.
+
+ console.log("running exercise 8")
+
+ //create the object
+
+ let student = {
+     
+  chemistry: {
+    grade: 9
+  },
+  physics:{
+    grade:7
+  },
+  maths: {
+    grade: 1
+  },
+  }
+
+//create the for loop 
+
+function findAverageGrade(obj){
+
+let sum = 0
+let number_of_subjects = 0
+let list_of_subjects = Object.keys(obj)
+console.log(list_of_subjects)
+ for( let i = 0; i < list_of_subjects.length; i++ ) {
+      let current_key = list_of_subjects[i]
+      let subject_grade = student[current_key].grade
+      sum = sum + subject_grade
+      number_of_subjects++
+ }
+
+ let average_grade = sum / number_of_subjects
+ return average_grade
+
+}
+// main program
+console.log(findAverageGrade(student))
+
+// 9. Scope and Closure: Create a function that returns a new function. The returned function should remember and log the number of times it's been called.
+
+
+console.log("running exercise 9")
+
+function inception() 
+{
+let number_of_invocations = 0;
+
+return function() {
+  number_of_invocations++
+  console.log(number_of_invocations)
+}
+}
+
+const incrementer = inception()
+
+incrementer()
+incrementer()
+
+
+// 10. Array Sorting: Write a function that sorts an array of objects based on a specific property (e.g., 'date') in descending order.
+
+//create the array of objects
+// Create the objets with a date in mind
+// sort the array
+
+let arr = [ 
+    {subject: 'maths', grade: 10},
+     {subject: 'spanish', grade: 2},
+    {subject: 'literature', grade: 6}
+  ]
+
+  function sortedByGrade(arr) {
+
+    let sorted_array = arr.sort(function (a, b) {
+      return a.grade - b.grade
+    } );
+    console.log(sorted_array)
+
+    return sorted_array
+
+  }
+
+  console.log(sortedByGrade(arr))
+
+  // 11. Array Methods: Given an array of strings, filter out all the strings with a length less than 5 characters.
+  //create the array of strings
+  // create another array with the shoretend length
+  // loop through the array and get the length of each string
+
+  console.log("running exercise 11")
+
+
+  let array_of_short_strings = ['hello', 'world', 'my', 'name', 'juan lopez', 'long word']
+
+  
+
+  function filterShortStrings(arr) {
+    let new_array_of_long_strings = []
+
+    for (let i = 0; i < arr.length; i++) {
+      let current_string = arr[i]
+      if (current_string.length > 5) {
+        new_array_of_long_strings.push(current_string)
+      }
+    }
+     return new_array_of_long_strings
+  }
+  console.log(filterShortStrings(array_of_short_strings))
