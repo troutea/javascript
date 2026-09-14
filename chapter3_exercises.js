@@ -300,3 +300,29 @@ let arr = [
      return new_array_of_long_strings
   }
   console.log(filterShortStrings(array_of_short_strings))
+
+  // 13. Object Iteration: Write a function that counts the number of occurrences of each word in a given string and stores the results in an object.
+  //Create the array
+
+  let sentence = 'hello world my name is hello, is is , what a grade world, my, banana, james, cool'
+
+  //create the function
+
+  function wordCounter(str) {
+    let counter_dict = {}
+
+    let string_to_array = str.replaceAll(',', '').split(' ')
+
+    for (let i = 0; i < string_to_array.length; i++) {
+      let current_word = string_to_array[i]
+
+      if (current_word in counter_dict) {
+        counter_dict[current_word] = counter_dict[current_word] + 1
+      } else {
+        counter_dict[current_word] = 1
+      }
+    } 
+    return counter_dict
+  }
+
+  console.log(wordCounter(sentence))

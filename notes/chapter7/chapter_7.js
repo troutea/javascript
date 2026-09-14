@@ -1,4 +1,4 @@
-// arrow functions
+arrow functions
 
 const myFunction = (input) => {
     console.log('Executed function')
