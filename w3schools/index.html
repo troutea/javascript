@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
+    <h1>JavaScript Functions</h1>
+<h2>Arrow Functions</h2>
 
-<h2>Activate Debugging</h2>
+<p>This example shows the syntax of an Arrow Function, and how to use it.</p>
 
-<p>F12 on your keyboard will activate debugging.</p>
-<p>Then select "Console" in the debugger menu.</p>
-<p>Then click Run again.</p>
+<p id="demo"></p>
 
-<script>
-console.log(5 + 6);
+
+
+<script> 
+const multiply = (a,b) => a * b;
+
+let result = multiply(4,5);
+
+document.getElementById("demo").innerHTML = "The product is: " + result;
+
 </script>
+    
+
 
 </body>
-</html> 
+</html>
