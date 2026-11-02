@@ -1,14 +1,13 @@
-// Load the filesystem module
-const fs = require('fs');
+const fs = require('fs').promises;
 
-// Read file asynchronously
-fs.readFile('myfile.txt', 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading file: ' + err);
-    return;
+
+async function readFile() {
+  try {
+  const data = await fs.readFile('myfile.txt', 'utf8');
+  console.log(data);
+  } catch (error) {
+    console.error('Error reading dile: ', error);
   }
-  console.log('File content: ' + data);
-});
+}
 
-console.log('Reading file... (this runs first!)'); 
-console.log("testing this watch");
+readFile();
